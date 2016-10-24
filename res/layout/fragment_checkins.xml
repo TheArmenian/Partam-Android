@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+     android:background="@color/bg_checkins"
+    android:clickable="true">
+    
+    <RelativeLayout
+    android:id="@+id/actionBar_checkins"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/actionbar" >
+
+    <ImageView
+        android:id="@+id/img_back_checkin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_back"
+        android:layout_centerVertical="true"
+        />
+
+    <ImageView
+        android:id="@+id/imgTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/partam" />
+
+   <!--  <ImageView
+        android:id="@+id/btn_favorite_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/btn_favorite_empty" />  -->
+
+</RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/blue_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/partam_blue"
+            android:padding="10dp" 
+            android:layout_below="@+id/actionBar_checkins">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/txtCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtName"
+                android:layout_below="@+id/txtName"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFF" />
+        </RelativeLayout>
+        
+    <RelativeLayout
+            android:id="@+id/comments_checkins_area"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_category"
+            android:layout_below="@+id/blue_area" >
+
+            <TextView
+                android:id="@+id/txtCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/relComments"
+                android:drawableLeft="@drawable/icon_category"
+                android:drawablePadding="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/comment"
+                android:textStyle="bold" />
+            
+            <RelativeLayout
+                android:id="@+id/relChecks"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/relComments"
+                android:background="@drawable/checkin_count_bg"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp" >
+
+                <ImageView
+                    android:id="@+id/img_chekin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/checkin_icon" />
+
+                <TextView
+                    android:id="@+id/txtCheckinCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/img_chekin"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relComments"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#595959"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp" >
+
+                <ImageView
+                    android:id="@+id/imgComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_comment_empty" />
+
+                <TextView
+                    android:id="@+id/txtCommentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/imgComment"
+                    android:text="0"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_checkins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/comments_checkins_area"
+        android:descendantFocusability="beforeDescendants"
+        android:divider="@null"
+        android:dividerHeight="20dp" 
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_above="@+id/add_checkins">
+    </ListView>
+    
+    <RelativeLayout 
+        android:id="@+id/add_checkins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/addcheckins_bg"
+        android:layout_alignParentBottom="true">
+        <TextView 
+            android:id="@+id/txt_add_checkins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_checkins_with_selfie"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_loader"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners"
+    android:clipChildren="true" >
+
+    <RelativeLayout
+        android:id="@+id/selfie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/viewLoader_for_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/view_loader_for_image"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             >
+
+            <ImageView
+                android:id="@+id/img_selfie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/data_layout"
+            android:layout_width="110px"
+            android:layout_height="121px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/img_checkin_date_bg"
+            android:gravity="center"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:textColor="@color/White"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selfie"
+        android:padding="5dp" >
+
+        <com.partam.partam.customclasses.RoundedImageView
+            android:id="@+id/img_user_photo"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            app:corner_radius="50dp" />
+
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_user_photo"
+            android:text=" "
+            android:textColor="#4f4f4f"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_user_hometown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_user_name"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_user_photo"
+            android:text=" "
+            android:textColor="#4f4f4f"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btn_delete_checkin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/checkin_delete_icon"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/chechin_view_loader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_loader"
+        android:visibility="gone" />
+
+</RelativeLayout>

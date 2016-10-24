@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:padding="4dp" >
+
+    <com.partam.partam.customclasses.RoundedImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/img_default_comment"
+        app:corner_radius="5dp" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgProfile"
+        android:layout_alignRight="@+id/imgProfile"
+        android:layout_below="@+id/imgProfile"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="Abraham Abrahamyan"
+        android:textSize="8sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgProfile"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/imgProfile"
+        android:background="@drawable/bg_comment"
+        android:padding="4dp" >
+
+        <TextView
+            android:id="@+id/txtComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@+id/txtClock"
+            android:text="This is a Comment" />
+
+        <TextView
+            android:id="@+id/txtClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="2dp"
+            android:drawableLeft="@drawable/icon_clock"
+            android:drawablePadding="4dp"
+            android:text="22:50" />
+    </RelativeLayout>
+
+</RelativeLayout>

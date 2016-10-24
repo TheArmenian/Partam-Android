@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ContentDescription">
+        <ignore path="res/layout/fragment_map.xml" />
+        <ignore path="res/layout/item_main.xml" />
+        <ignore path="res/layout/twitter_activity.xml" />
+    </issue>
+    <issue id="DuplicateIds">
+        <ignore path="res/layout/fragment_map.xml" />
+    </issue>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/fragment_map.xml" />
+        <ignore path="res/layout/item_main.xml" />
+    </issue>
+</lint>

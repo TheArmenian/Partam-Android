@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Black">#000</color>
+    <color name="Opaque">#5000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Transparent">#00000000</color>
+    
+    <color name="LightBlue">#ADD8E6</color>
+    <color name="Blue">#0000FF</color>
+    <color name="DarkBlue">#00008B</color>
+    <color name="MidnightBlue">#191970</color>
+    
+    <color name="Red">#FF0000</color>
+    <color name="Violet">#5A009D</color>
+    
+    <color name="Gray">#808080</color>
+    <color name="LightGrayColor">#aaaaaa</color>
+    <color name="DarkGray">#555555</color>
+    
+    <color name="BorderColor">#4aa0e1</color>
+    <color name="bgRoot">#00aff0</color>
+    
+    <color name="RankNameColor">#5f9fef</color>
+    
+    <color name="WhiteDesableState">#7FFF</color>
+    
+    <color name="LabelsBlueColor">#00aae6</color>
+    
+    <color name="LabelsGreenColor">#37e10f</color>
+    
+    <color name="ListViewSectionsColor">#0091db</color>
+    <color name="ListViewHeaderColor">#e2e7ed</color>
+    <color name="ptrHeaderTextColor">#576c89</color>
+    
+    <color name="ItemSelectedBlue">#85d3ef</color>
+    <color name="SuperAdminItemColor">#f4f4f4</color>
+    
+    <color name="actionbar">#c1392b</color>
+    <color name="partam_blue">#2c99d7</color>
+    <color name="partam_red">#c1392b</color>
+    <color name="bg_detail">#e3e3e3</color>
+    <color name="comment">#606366</color>
+    <color name="bg_category">#f1f1f1</color>
+    <color name="bg_checkins">#edeaec</color>
+    
+    
+    <color name="dialog_fb_header">#3b5998</color>
+    <color name="dialog_fb_content">#30487b</color>
+    <color name="dialog_sign_in_header">#2c99d7</color>
+    <color name="dialog_sign_in_content">#247caf</color>
+    <color name="dialog_reg_header">#c1392b</color>
+    <color name="dialog_reg_content">#9d2e23</color>
+    
+</resources>

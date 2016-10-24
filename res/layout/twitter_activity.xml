@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgTwitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/txtUpdateStatus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:layout_below="@+id/imgTwitter"
+        android:layout_above="@+id/btnUpdateStatus"
+        android:inputType="textMultiLine"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+ 
+    <Button android:id="@+id/btnUpdateStatus"
+        android:layout_width="143dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_tweet"
+        android:visibility="invisible"/>
+ 
+</RelativeLayout>

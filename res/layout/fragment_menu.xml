@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_bg"
+    tools:context="com.partam.partam.MainActivity$PlaceholderFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/btnLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_logo" />
+
+        <EditText
+            android:id="@+id/txtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/search_bar_bg"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="Search"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:textColor="#FFF"
+            android:textColorHint="#FFF" >
+        </EditText>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" >
+
+            <ImageView
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_login"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/layProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/btnLogin"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bg_menu_btns"
+                android:clickable="true"
+                android:visibility="gone" >
+
+                <com.partam.partam.customclasses.RoundedImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:background="@color/DarkGray"
+                    app:corner_radius="5dp" />
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imgUser"
+                    android:singleLine="true"
+                    android:text="Medium Text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_menu_btns"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/imgHome"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/home_offset"
+                android:src="@drawable/icon_home" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:text="HOME"
+                android:layout_toRightOf="@+id/imgHome"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFF"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/btnSelectCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/selector_btn_city" />
+
+        <ListView
+            android:id="@+id/listCity"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:divider="#FFF"
+            android:dividerHeight="1dp"
+            android:listSelector="#0000"
+            android:visibility="gone" >
+        </ListView>
+
+        <ImageView
+            android:id="@+id/btnSelectCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/selector_btn_category" />
+
+        <ListView
+            android:id="@+id/listCategory"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:divider="#FFF"
+            android:dividerHeight="1dp"
+            android:listSelector="#0000"
+            android:visibility="gone" >
+        </ListView>
+
+        <ImageView
+            android:id="@+id/btnFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/btn_favorites" />
+
+        <ImageView
+            android:id="@+id/btnAboutApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/btn_about_app" />
+
+        <ImageView
+            android:id="@+id/btnSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/btn_sign_out"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="Version 1.0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/DarkGray" />
+
+</RelativeLayout>
